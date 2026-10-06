@@ -1,0 +1,17 @@
+[Unit]
+Description=Watchlist News Alert App (Finnhub -> Telegram)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=opc
+WorkingDirectory=/home/opc/news_alert_app
+ExecStart=/usr/bin/python3 /home/opc/news_alert_app/news_loop.py
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

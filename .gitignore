@@ -1,0 +1,17 @@
+# secrets - never commit
+.env
+*.key
+*.pem
+
+# runtime state and logs
+logs/*
+!logs/.gitkeep
+
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# macOS
+.DS_Store
